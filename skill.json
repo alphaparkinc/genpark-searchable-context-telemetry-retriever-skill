@@ -1,0 +1,39 @@
+{
+  "name": "genpark-searchable-context-telemetry-retriever-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Searchable historical context and raw compiler telemetry retriever querying earlier window outputs on-demand.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "coding-agent",
+  "tags": [
+    "codex-astra",
+    "searchable-context",
+    "raw-telemetry",
+    "log-retrieval",
+    "developer-tools"
+  ],
+  "inputs": {
+    "search_query": {
+      "type": "string"
+    },
+    "window_lookback_steps": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "retrieval_id": {
+      "type": "string"
+    },
+    "matched_prior_window_index": {
+      "type": "integer"
+    },
+    "fidelity_score": {
+      "type": "number"
+    },
+    "telemetry_archive_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
